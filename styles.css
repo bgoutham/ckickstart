@@ -375,16 +375,17 @@ input {
 .nav__links {
   display: flex;
   align-items: center;
-  gap: 8px;
+  gap: 2px;
 }
 
 .nav__link {
-  padding: 8px 16px;
+  padding: 8px 10px;
   border-radius: var(--radius-md);
-  font-size: 0.9rem;
+  font-size: 0.85rem;
   font-weight: 500;
   color: var(--text-secondary);
   transition: all var(--transition-fast);
+  white-space: nowrap;
 }
 
 .nav__link:hover,
@@ -2537,6 +2538,27 @@ input {
 }
 
 /* ==================== RESPONSIVE ==================== */
+
+/* Large tablet / small laptop — tame the nav */
+@media (max-width: 1280px) {
+  .nav__link {
+    padding: 8px 6px;
+    font-size: 0.8rem;
+  }
+
+  .nav__links {
+    gap: 0;
+  }
+
+  .nav__actions {
+    gap: 8px;
+  }
+
+  .nav__cta {
+    font-size: 0.8rem;
+    padding: 8px 14px;
+  }
+}
 
 /* Tablet */
 @media (max-width: 1024px) {
