@@ -2811,3 +2811,721 @@ button:focus:not(:focus-visible),
 a:focus:not(:focus-visible) {
   outline: none;
 }
+
+/* ==================== CK BRAND VARIABLES ==================== */
+:root {
+  --ck-red: #C1472B;
+  --ck-red-light: #D4634A;
+  --ck-red-dark: #A03822;
+  --ck-orange: #E8683A;
+  --gradient-ck: linear-gradient(135deg, #C1472B, #E8683A);
+}
+
+[data-theme="dark"] {
+  --ck-red: #D4634A;
+  --ck-red-light: #E8784F;
+}
+
+/* ==================== HERO CK BADGE ==================== */
+.hero__badge--ck {
+  background: linear-gradient(135deg, rgba(193,71,43,0.12), rgba(232,104,58,0.08));
+  border: 1px solid rgba(193,71,43,0.25);
+  color: var(--ck-red);
+}
+
+.hero__badge-dot--ck {
+  background: var(--ck-red) !important;
+  box-shadow: 0 0 8px rgba(193,71,43,0.5);
+}
+
+/* ==================== SOLUTIONS SECTION ==================== */
+.solutions {
+  padding: 80px 0;
+  background: var(--bg-secondary);
+}
+
+.solutions__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 24px;
+  margin-top: 48px;
+}
+
+.solution-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 32px;
+  transition: transform var(--transition-base), box-shadow var(--transition-base);
+  position: relative;
+  overflow: hidden;
+}
+
+.solution-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-xl);
+}
+
+.solution-card__icon {
+  font-size: 2.5rem;
+  margin-bottom: 16px;
+  display: block;
+}
+
+.solution-card__title {
+  font-family: var(--font-display);
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 8px;
+}
+
+.solution-card__stat {
+  display: inline-block;
+  background: linear-gradient(135deg, rgba(193,71,43,0.1), rgba(232,104,58,0.08));
+  color: var(--ck-red);
+  font-size: 0.8rem;
+  font-weight: 600;
+  padding: 4px 10px;
+  border-radius: var(--radius-full);
+  margin-bottom: 12px;
+}
+
+.solution-card__desc {
+  color: var(--text-secondary);
+  font-size: 0.95rem;
+  line-height: 1.6;
+  margin-bottom: 16px;
+}
+
+.solution-card__features {
+  list-style: none;
+  padding: 0;
+}
+
+.solution-card__features li {
+  color: var(--text-secondary);
+  font-size: 0.875rem;
+  padding: 4px 0;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.solution-card__features .check {
+  color: var(--ck-red);
+  font-weight: 700;
+}
+
+.solution-card__accent {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+}
+
+.solution-card__accent--private { background: var(--gradient-ck); }
+.solution-card__accent--public { background: linear-gradient(135deg, #3b82f6, #2563eb); }
+.solution-card__accent--international { background: linear-gradient(135deg, #8b5cf6, #7c3aed); }
+.solution-card__accent--charter { background: linear-gradient(135deg, #22c55e, #16a34a); }
+
+/* ==================== POPULAR SCHOOLS TEASER ==================== */
+.popular-schools {
+  padding: 80px 0;
+  background: var(--bg);
+}
+
+.popular-schools__content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 48px;
+  align-items: center;
+  margin-top: 48px;
+}
+
+.popular-schools__text h3 {
+  font-family: var(--font-display);
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 12px;
+}
+
+.popular-schools__text p {
+  color: var(--text-secondary);
+  line-height: 1.7;
+  margin-bottom: 20px;
+}
+
+.popular-schools__filters {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+}
+
+.popular-schools__select {
+  padding: 10px 16px;
+  border-radius: var(--radius-md);
+  border: 1px solid var(--border);
+  background: var(--surface);
+  color: var(--text-primary);
+  font-family: var(--font-sans);
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: border-color var(--transition-fast);
+}
+
+.popular-schools__select:focus {
+  border-color: var(--ck-red);
+  outline: none;
+}
+
+.popular-schools__chart {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 28px;
+  box-shadow: var(--shadow-lg);
+}
+
+.popular-schools__chart-title {
+  font-family: var(--font-display);
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin-bottom: 4px;
+}
+
+.popular-schools__chart-sub {
+  font-size: 0.8rem;
+  color: var(--text-tertiary);
+  margin-bottom: 20px;
+}
+
+.popular-schools__bar-group {
+  margin-bottom: 14px;
+}
+
+.popular-schools__bar-label {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.85rem;
+  margin-bottom: 6px;
+  color: var(--text-primary);
+}
+
+.popular-schools__bar-label span:last-child {
+  color: var(--text-tertiary);
+  font-weight: 500;
+}
+
+.popular-schools__bar-track {
+  height: 28px;
+  background: var(--bg-tertiary);
+  border-radius: var(--radius-sm);
+  overflow: hidden;
+  position: relative;
+}
+
+.popular-schools__bar-fill {
+  height: 100%;
+  border-radius: var(--radius-sm);
+  transition: width 1.5s cubic-bezier(0.22, 1, 0.36, 1);
+  display: flex;
+  align-items: center;
+  padding-left: 10px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: #fff;
+}
+
+/* Animate bars on scroll - bars use inline width styles,
+   so animation is handled via transform scaleX */
+.popular-schools__bar-fill {
+  transform-origin: left center;
+  transform: scaleX(0);
+}
+
+.popular-schools.visible .popular-schools__bar-fill,
+.popular-schools__bar-fill.animated {
+  transform: scaleX(1);
+}
+
+.popular-schools__overlay {
+  position: relative;
+  margin-top: 12px;
+}
+
+.popular-schools__blur {
+  filter: blur(4px);
+  opacity: 0.5;
+  pointer-events: none;
+}
+
+.popular-schools__gate {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: rgba(255, 255, 255, 0.6);
+  border-radius: var(--radius-md);
+  text-align: center;
+  backdrop-filter: blur(2px);
+}
+
+[data-theme="dark"] .popular-schools__gate {
+  background: rgba(11, 17, 33, 0.7);
+}
+
+.popular-schools__gate p {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin-bottom: 10px;
+}
+
+/* ==================== CK 360 SECTION ==================== */
+.ck360 {
+  padding: 80px 0;
+  background: var(--bg-secondary);
+  position: relative;
+  overflow: hidden;
+}
+
+.ck360__badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: linear-gradient(135deg, rgba(193,71,43,0.12), rgba(232,104,58,0.08));
+  border: 1px solid rgba(193,71,43,0.25);
+  color: var(--ck-red);
+  font-weight: 600;
+  font-size: 0.8rem;
+  padding: 6px 14px;
+  border-radius: var(--radius-full);
+  margin-bottom: 16px;
+}
+
+.ck360__intro {
+  max-width: 680px;
+  margin: 0 auto 48px;
+  text-align: center;
+}
+
+.ck360__intro p {
+  color: var(--text-secondary);
+  line-height: 1.7;
+  font-size: 1rem;
+}
+
+.ck360__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 24px;
+  margin-bottom: 48px;
+}
+
+.ck360-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 28px;
+  transition: transform var(--transition-base), box-shadow var(--transition-base);
+}
+
+.ck360-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-xl);
+}
+
+.ck360-card__title {
+  font-family: var(--font-display);
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 12px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.ck360-card__title span {
+  font-size: 1.3rem;
+}
+
+.ck360-card__desc {
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+  line-height: 1.6;
+}
+
+/* CK 360 Line Chart */
+.ck360-line-chart {
+  width: 100%;
+  height: 160px;
+  position: relative;
+  margin: 12px 0;
+}
+
+.ck360-line-chart svg {
+  width: 100%;
+  height: 100%;
+}
+
+.ck360-line-chart__line {
+  fill: none;
+  stroke-width: 2.5;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.ck360-line-chart__area {
+  opacity: 0.1;
+}
+
+.ck360-line-chart__labels {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.7rem;
+  color: var(--text-tertiary);
+  margin-top: 4px;
+}
+
+/* CK 360 Bar Comparison */
+.ck360-bar-compare {
+  margin: 12px 0;
+}
+
+.ck360-bar-compare__row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.ck360-bar-compare__label {
+  font-size: 0.8rem;
+  color: var(--text-secondary);
+  min-width: 70px;
+  text-align: right;
+}
+
+.ck360-bar-compare__track {
+  flex: 1;
+  height: 20px;
+  background: var(--bg-tertiary);
+  border-radius: var(--radius-sm);
+  overflow: hidden;
+}
+
+.ck360-bar-compare__fill {
+  height: 100%;
+  border-radius: var(--radius-sm);
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding-right: 8px;
+  font-size: 0.7rem;
+  font-weight: 600;
+  color: #fff;
+  transition: width 1.2s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+/* CK 360 Heatmap */
+.ck360-heatmap {
+  margin: 12px 0;
+}
+
+.ck360-heatmap__grid {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 4px;
+}
+
+.ck360-heatmap__cell {
+  aspect-ratio: 1;
+  border-radius: 4px;
+  position: relative;
+  transition: transform var(--transition-fast);
+}
+
+.ck360-heatmap__cell:hover {
+  transform: scale(1.15);
+  z-index: 1;
+}
+
+.ck360-heatmap__labels-x,
+.ck360-heatmap__labels-y {
+  display: flex;
+  font-size: 0.65rem;
+  color: var(--text-tertiary);
+}
+
+.ck360-heatmap__labels-x {
+  justify-content: space-between;
+  padding-left: 0;
+  margin-top: 4px;
+}
+
+.ck360-heatmap__legend {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  margin-top: 8px;
+  justify-content: flex-end;
+}
+
+.ck360-heatmap__legend span {
+  font-size: 0.65rem;
+  color: var(--text-tertiary);
+}
+
+.ck360-heatmap__legend-cell {
+  width: 14px;
+  height: 14px;
+  border-radius: 2px;
+}
+
+/* CK 360 Upsell Banner */
+.ck360__upsell {
+  background: var(--surface);
+  border: 2px solid var(--ck-red);
+  border-radius: var(--radius-lg);
+  padding: 32px 40px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 24px;
+}
+
+.ck360__upsell-text h3 {
+  font-family: var(--font-display);
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 6px;
+}
+
+.ck360__upsell-text p {
+  color: var(--text-secondary);
+  font-size: 0.95rem;
+}
+
+.ck360__upsell-actions {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+/* ==================== CK RED BUTTON VARIANT ==================== */
+.btn--ck {
+  background: var(--gradient-ck);
+  color: #fff;
+  border: none;
+  box-shadow: 0 4px 15px rgba(193, 71, 43, 0.3);
+}
+
+.btn--ck:hover {
+  opacity: 0.9;
+  transform: translateY(-1px);
+  box-shadow: 0 6px 20px rgba(193, 71, 43, 0.4);
+}
+
+/* ==================== PRICING 5-COL & CK360 ACCENT ==================== */
+.pricing__grid--5 {
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+}
+
+.pricing-card--ck360 {
+  border-color: var(--ck-red);
+}
+
+.pricing-card--ck360 .pricing-card__badge {
+  background: var(--gradient-ck);
+}
+
+/* ==================== FOOTER SINCE LINE ==================== */
+.footer__since {
+  font-size: 0.85rem;
+  color: var(--text-tertiary);
+  margin-top: 12px;
+  font-style: italic;
+}
+
+/* ==================== COUNSELOR HIGHLIGHT GRID ==================== */
+.audience-panel__highlight-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+  margin-top: 16px;
+}
+
+.audience-panel__highlight-card {
+  background: var(--bg-tertiary);
+  border-radius: var(--radius-md);
+  padding: 14px;
+  transition: transform var(--transition-fast), box-shadow var(--transition-fast);
+}
+
+.audience-panel__highlight-card:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+}
+
+.audience-panel__highlight-card h5 {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin-bottom: 4px;
+}
+
+.audience-panel__highlight-card p {
+  font-size: 0.8rem;
+  color: var(--text-secondary);
+  line-height: 1.4;
+}
+
+/* ==================== DARK MODE - NEW SECTIONS ==================== */
+[data-theme="dark"] .solution-card__stat {
+  background: linear-gradient(135deg, rgba(212,99,74,0.15), rgba(232,104,58,0.1));
+}
+
+[data-theme="dark"] .solution-card__features .check {
+  color: var(--ck-red-light);
+}
+
+[data-theme="dark"] .popular-schools__select {
+  background: var(--surface);
+  border-color: var(--border);
+  color: var(--text-primary);
+}
+
+[data-theme="dark"] .ck360__badge {
+  background: linear-gradient(135deg, rgba(212,99,74,0.15), rgba(232,104,58,0.1));
+  border-color: rgba(212,99,74,0.3);
+}
+
+[data-theme="dark"] .ck360__upsell {
+  border-color: var(--ck-red);
+  background: var(--surface);
+}
+
+[data-theme="dark"] .ck360-heatmap__cell {
+  opacity: 0.9;
+}
+
+[data-theme="dark"] .audience-panel__highlight-card {
+  background: var(--surface-elevated);
+}
+
+[data-theme="dark"] .hero__badge--ck {
+  background: linear-gradient(135deg, rgba(212,99,74,0.15), rgba(232,104,58,0.1));
+  border-color: rgba(212,99,74,0.3);
+}
+
+/* ==================== RESPONSIVE - NEW SECTIONS ==================== */
+
+/* Tablet */
+@media (max-width: 1024px) {
+  .popular-schools__content {
+    grid-template-columns: 1fr;
+  }
+
+  .ck360__grid {
+    grid-template-columns: 1fr;
+  }
+
+  .ck360__upsell {
+    flex-direction: column;
+    text-align: center;
+    padding: 28px 24px;
+  }
+
+  .ck360__upsell-actions {
+    justify-content: center;
+  }
+
+  .solutions__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .pricing__grid--5 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Mobile */
+@media (max-width: 640px) {
+  .solutions {
+    padding: 60px 0;
+  }
+
+  .solutions__grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+    margin-top: 32px;
+  }
+
+  .solution-card {
+    padding: 24px;
+  }
+
+  .popular-schools {
+    padding: 60px 0;
+  }
+
+  .popular-schools__content {
+    gap: 32px;
+    margin-top: 32px;
+  }
+
+  .popular-schools__chart {
+    padding: 20px;
+  }
+
+  .popular-schools__filters {
+    flex-direction: column;
+  }
+
+  .popular-schools__select {
+    width: 100%;
+  }
+
+  .ck360 {
+    padding: 60px 0;
+  }
+
+  .ck360__grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .ck360-card {
+    padding: 20px;
+  }
+
+  .ck360__upsell {
+    padding: 24px 20px;
+  }
+
+  .ck360-bar-compare__label {
+    min-width: 55px;
+    font-size: 0.72rem;
+  }
+
+  .pricing__grid--5 {
+    grid-template-columns: 1fr;
+  }
+
+  .audience-panel__highlight-grid {
+    grid-template-columns: 1fr;
+  }
+}
